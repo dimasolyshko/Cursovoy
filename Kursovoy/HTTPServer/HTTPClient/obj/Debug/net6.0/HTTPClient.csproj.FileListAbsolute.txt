@@ -1,0 +1,14 @@
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\bin\Debug\net6.0\HTTPClient.exe
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\bin\Debug\net6.0\HTTPClient.deps.json
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\bin\Debug\net6.0\HTTPClient.runtimeconfig.json
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\bin\Debug\net6.0\HTTPClient.dll
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\bin\Debug\net6.0\HTTPClient.pdb
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\net6.0\HTTPClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\net6.0\HTTPClient.AssemblyInfoInputs.cache
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\net6.0\HTTPClient.AssemblyInfo.cs
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\net6.0\HTTPClient.csproj.CoreCompileInputs.cache
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\net6.0\HTTPClient.dll
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\net6.0\refint\HTTPClient.dll
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\net6.0\HTTPClient.pdb
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\net6.0\HTTPClient.genruntimeconfig.cache
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\net6.0\ref\HTTPClient.dll
