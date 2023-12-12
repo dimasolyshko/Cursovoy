@@ -1041,19 +1041,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\Disoland\\.nuget\\packages\\": {},
+    "D:\\Visual_SDK\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\программирование\\SOCKET\\TcpServer\\TcpServer\\TcpServer.csproj",
+      "projectUniqueName": "D:\\гитхаб разработки\\Kursovoy\\SOCKET\\TcpServer\\TcpServer\\TcpServer.csproj",
       "projectName": "TcpServer",
-      "projectPath": "D:\\программирование\\SOCKET\\TcpServer\\TcpServer\\TcpServer.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\программирование\\SOCKET\\TcpServer\\TcpServer\\obj\\",
+      "projectPath": "D:\\гитхаб разработки\\Kursovoy\\SOCKET\\TcpServer\\TcpServer\\TcpServer.csproj",
+      "packagesPath": "C:\\Users\\Disoland\\.nuget\\packages\\",
+      "outputPath": "D:\\гитхаб разработки\\Kursovoy\\SOCKET\\TcpServer\\TcpServer\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Visual_SDK\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Disoland\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1107,12 +1112,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.25, 6.0.25]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

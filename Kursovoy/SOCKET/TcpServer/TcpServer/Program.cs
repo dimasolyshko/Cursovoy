@@ -5,6 +5,7 @@ using System.IO;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Diagnostics;
+using System.Reflection.PortableExecutable;
 
 class Server
 {
@@ -19,85 +20,94 @@ class Server
         server.Start();
         Console.WriteLine("Сервер запущен. Ожидание подключений...");
 
-        using (TcpClient client = server.AcceptTcpClient())
+        while (true)
         {
-            Console.WriteLine("Клиент подключен.");
-
-            using (NetworkStream stream = client.GetStream())
+            using (TcpClient client = server.AcceptTcpClient())
             {
-                // Получаем размер изображения
-                byte[] sizeBytes = new byte[4];
-                stream.Read(sizeBytes, 0, sizeBytes.Length);
-                int imageSize = BitConverter.ToInt32(sizeBytes, 0);
-
-                // Получаем изображение
-                byte[] imageData = new byte[imageSize];
-                int bytesRead = stream.Read(imageData, 0, imageData.Length);
-
-                // Измеряем задержку приема
-                Stopwatch receiveStopwatch = Stopwatch.StartNew();
-
-                // Обрабатываем изображение
-                using (MemoryStream ms = new MemoryStream(imageData))
+                using (NetworkStream stream = client.GetStream())
+                using (BinaryReader reader = new BinaryReader(stream))
+                using (BinaryWriter writer = new BinaryWriter(stream))
                 {
-                    Image img = Image.FromStream(ms);
+                    // Получаем номер операции
+                    int operation = reader.ReadInt32();
 
-                    img.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                    // Получаем размер изображения
+                    byte[] sizeBytes = new byte[4];
+                    stream.Read(sizeBytes, 0, sizeBytes.Length);
+                    int imageSize = BitConverter.ToInt32(sizeBytes, 0);
 
-                    // Увеличиваем размер изображения в 2 раза
-                    img = ScaleImage(img, 2.5f); // Добавили эту строку
+                    // Получаем изображение
+                    byte[] imageData = new byte[imageSize];
+                    int bytesRead = stream.Read(imageData, 0, imageData.Length);
 
-                    ApplyBrightnessFilter(img, 2.3f);//Добавление яркости
+                    // Измеряем задержку приема
+                    Stopwatch receiveStopwatch = Stopwatch.StartNew();
 
-                    ApplyNoiseEffect(img, 50); // Измените интенсивность шума по вашему желанию
-
-                    // Сохраняем перевернутое и увеличенное изображение в массив байт
-                    using (MemoryStream modifiedImageStream = new MemoryStream())
+                    // Обрабатываем изображение в зависимости от номера операции
+                    using (MemoryStream ms = new MemoryStream(imageData))
                     {
-                        img.Save(modifiedImageStream, System.Drawing.Imaging.ImageFormat.Jpeg);
-                        byte[] modifiedImageData = modifiedImageStream.ToArray();
+                        Image img = Image.FromStream(ms);
 
-                        // Измеряем задержку отправки
-                        Stopwatch sendStopwatch = Stopwatch.StartNew();
+                        switch (operation)
+                        {
+                            case 1:
+                                img.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                                break;
+                            case 2:
+                                img = ScaleImage(img, 2.5f);
+                                break;
+                            case 3:
+                                ApplyBrightnessFilter(img, 2.3f);
+                                break;
+                            case 4:
+                                ApplyNoiseEffect(img, 50);
+                                break;
+                            case 5:
+                                img.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                                img = ScaleImage(img, 2.5f);
+                                ApplyBrightnessFilter(img, 2.3f);
+                                ApplyNoiseEffect(img, 50);
+                                break;
+                            default:
+                                Console.WriteLine("Неверный номер операции");
+                                break;
+                        }
 
                         // Отправляем размер измененного изображения клиенту
-                        byte[] modifiedSizeBytes = BitConverter.GetBytes(modifiedImageData.Length);
-                        stream.Write(modifiedSizeBytes, 0, modifiedSizeBytes.Length);
+                        using (MemoryStream modifiedImageStream = new MemoryStream())
+                        {
+                            img.Save(modifiedImageStream, ImageFormat.Jpeg);
+                            byte[] modifiedImageData = modifiedImageStream.ToArray();
 
-                        // Отправляем измененное изображение клиенту
-                        stream.Write(modifiedImageData, 0, modifiedImageData.Length);
-                        Console.WriteLine("Измененное изображение отправлено клиенту.");
+                            // Отправляем размер измененного изображения клиенту
+                            byte[] modifiedSizeBytes = BitConverter.GetBytes(modifiedImageData.Length);
+                            stream.Write(modifiedSizeBytes, 0, modifiedSizeBytes.Length);
 
-                        // Измеряем задержку отправки
-                        sendStopwatch.Stop();
-
-                        long sendDelayMilliseconds = sendStopwatch.ElapsedMilliseconds;
-                        Console.WriteLine($"Задержка отправки: {sendDelayMilliseconds} мс");
+                            // Отправляем измененное изображение клиенту
+                            stream.Write(modifiedImageData, 0, modifiedImageData.Length);
+                            Console.WriteLine("Измененное изображение отправлено клиенту.");
+                        }
                     }
+                    // Измеряем задержку приема
+                    receiveStopwatch.Stop();
+                    long receiveDelayMilliseconds = receiveStopwatch.ElapsedMilliseconds;
+                    Console.WriteLine($"Задержка приема: {receiveDelayMilliseconds} мс");
 
+                    // Обновляем статистику
+                    packetCount++;
+                    totalDataSize += imageSize;
+
+                    // Анализ использования ресурсов (процессорное время)
+                    long processorTimeMilliseconds = (long)Process.GetCurrentProcess().TotalProcessorTime.TotalMilliseconds;
+                    Console.WriteLine($"Процессорное время: {processorTimeMilliseconds} мс");
                 }
-                // Измеряем задержку приема
-                receiveStopwatch.Stop();
-                long receiveDelayMilliseconds = receiveStopwatch.ElapsedMilliseconds;
-                Console.WriteLine($"Задержка приема: {receiveDelayMilliseconds} мс");
-
-                // Обновляем статистику
-                packetCount++;
-                totalDataSize += imageSize;
-
-                // Анализ использования ресурсов (процессорное время)
-                long processorTimeMilliseconds = (long)Process.GetCurrentProcess().TotalProcessorTime.TotalMilliseconds;
-                Console.WriteLine($"Процессорное время: {processorTimeMilliseconds} мс");
             }
+
+            // Вывод статистики
+            Console.WriteLine($"Всего отправлено пакетов: {packetCount}");
+            Console.WriteLine($"Общий размер переданных данных: {totalDataSize} байт");
         }
-        // Завершение
-        server.Stop();
-
-        // Вывод статистики
-        Console.WriteLine($"Всего отправлено пакетов: {packetCount}");
-        Console.WriteLine($"Общий размер переданных данных: {totalDataSize} байт");
-
-        Console.WriteLine("Завершение сервера.");
+        
     }
 
     // Метод для увеличения размера изображения

@@ -25,3 +25,31 @@ D:\программирование\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\
 D:\программирование\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\TcpClient.pdb
 D:\программирование\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\TcpClient.genruntimeconfig.cache
 D:\программирование\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\ref\TcpClient.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\TcpClient.exe
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\TcpClient.deps.json
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\TcpClient.runtimeconfig.json
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\TcpClient.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\TcpClient.pdb
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\MPI.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\OpenCvSharp.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\OpenCvSharp.Extensions.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\runtimes\win-x64\native\OpenCvSharpExtern.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\runtimes\win-x64\native\opencv_videoio_ffmpeg480_64.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\runtimes\win-x86\native\OpenCvSharpExtern.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\runtimes\win-x86\native\opencv_videoio_ffmpeg480.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\TcpClient.csproj.AssemblyReference.cache
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\TcpClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\TcpClient.AssemblyInfoInputs.cache
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\TcpClient.AssemblyInfo.cs
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\TcpClient.csproj.CoreCompileInputs.cache
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\TcpClient.sourcelink.json
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\TcpClient.csproj.CopyComplete
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\TcpClient.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\refint\TcpClient.dll
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\TcpClient.pdb
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\TcpClient.genruntimeconfig.cache
+D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpClient\obj\Debug\net6.0\ref\TcpClient.dll

@@ -24,3 +24,4 @@ D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPServer\bin\Debug\ne
 D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPServer\obj\Debug\net6.0\HTTPServer.csproj.AssemblyReference.cache
 D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPServer\obj\Debug\net6.0\HTTPServer.csproj.CopyComplete
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPServer\obj\Debug\net6.0\HTTPServer.sourcelink.json

@@ -21,12 +21,15 @@ class Server
         while (true)
         {
             HttpListenerContext context = await listener.GetContextAsync();
-            Console.WriteLine("Клиент подключен.");
 
             HttpListenerRequest request = context.Request;
 
             using (Stream receiveStream = request.InputStream)
             {
+                byte[] operationBytes = new byte[4];
+                await receiveStream.ReadAsync(operationBytes, 0, operationBytes.Length);
+                int operation = BitConverter.ToInt32(operationBytes, 0);
+
                 byte[] sizeBytes = new byte[4];
                 await receiveStream.ReadAsync(sizeBytes, 0, sizeBytes.Length);
                 int imageSize = BitConverter.ToInt32(sizeBytes, 0);
@@ -41,22 +44,36 @@ class Server
                 {
                     Image img = Image.FromStream(ms);
 
-                    img.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                    switch (operation)
+                    {
+                        case 1:
+                            img.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                            break;
+                        case 2:
+                            img = ScaleImage(img, 2.5f);
+                            break;
+                        case 3:
+                            ApplyBrightnessFilter(img, 2.3f);
+                            break;
+                        case 4:
+                            ApplyNoiseEffect(img, 50);
+                            break;
+                        case 5:
+                            img.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                            img = ScaleImage(img, 2.5f);
+                            ApplyBrightnessFilter(img, 2.3f);
+                            ApplyNoiseEffect(img, 50);
+                            break;
+                        default:
+                            Console.WriteLine("Неверный номер операции");
+                            break;
+                    }
 
-                    // Увеличиваем размер изображения в 2 раза
-                    img = ScaleImage(img, 2.5f); // Добавили эту строку
-
-                    ApplyBrightnessFilter(img, 2.3f);//Добавление яркости
-
-                    ApplyNoiseEffect(img, 50); // Измените интенсивность шума по вашему желанию
-
+                    // Отправка измененного изображения клиенту
                     using (MemoryStream modifiedImageStream = new MemoryStream())
                     {
                         img.Save(modifiedImageStream, ImageFormat.Jpeg);
                         byte[] modifiedImageData = modifiedImageStream.ToArray();
-
-                        // Измеряем задержку отправки
-                        Stopwatch sendStopwatch = Stopwatch.StartNew();
 
                         HttpListenerResponse response = context.Response;
                         response.ContentLength64 = modifiedImageData.Length;
@@ -66,12 +83,6 @@ class Server
                             await output.WriteAsync(modifiedImageData, 0, modifiedImageData.Length);
                             Console.WriteLine("Измененное изображение отправлено клиенту.");
                         }
-
-                        // Измеряем задержку отправки
-                        sendStopwatch.Stop();
-
-                        long sendDelayMilliseconds = sendStopwatch.ElapsedMilliseconds;
-                        Console.WriteLine($"Задержка отправки: {sendDelayMilliseconds} мс");
                     }
                 }
 
@@ -91,9 +102,9 @@ class Server
 
             // Вывод статистики
             Console.WriteLine($"Общий размер переданных данных: {totalDataSize} байт");
+            Console.WriteLine();
         }
     }
-
 
     // Метод для увеличения размера изображения
     private static Image ScaleImage(Image img, float scale)

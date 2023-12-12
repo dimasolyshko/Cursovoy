@@ -12,3 +12,4 @@ D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\ne
 D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\net6.0\HTTPClient.pdb
 D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\net6.0\HTTPClient.genruntimeconfig.cache
 D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\net6.0\ref\HTTPClient.dll
+D:\гитхаб разработки\Kursovoy\HTTPServer\HTTPClient\obj\Debug\net6.0\HTTPClient.sourcelink.json
