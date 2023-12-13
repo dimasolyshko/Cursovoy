@@ -12,6 +12,7 @@ class UDPServer
     static async Task Main(string[] args)
     {
         int serverPort = 12345; // Порт сервера
+        int maxPacketSize = 1024; // Максимальный размер пакета для отправки
         int packetCount = 0; // Счетчик отправленных пакетов
         long totalDataSize = 0; // Общий размер переданных данных
 
@@ -26,56 +27,71 @@ class UDPServer
 
             using (MemoryStream stream = new MemoryStream(receivedData))
             using (BinaryReader reader = new BinaryReader(stream))
-            using (BinaryWriter writer = new BinaryWriter(stream))
             {
-                //Переменная для задержки Отправки
-                Stopwatch SendStopwatch = Stopwatch.StartNew();
-
                 // Получаем номер операции
                 int operation = reader.ReadInt32();
 
                 // Получаем размер изображения
-                byte[] sizeBytes = new byte[4];
-                stream.Read(sizeBytes, 0, sizeBytes.Length);
-                int imageSize = BitConverter.ToInt32(sizeBytes, 0);
+                int imageSize = reader.ReadInt32();
 
                 // Получаем изображение
-                byte[] imageData = new byte[imageSize];
-                int bytesRead = stream.Read(imageData, 0, imageData.Length);
+                byte[] imageData = reader.ReadBytes(imageSize);
 
                 // Обрабатываем изображение в зависимости от номера операции
                 Image modifiedImage = ProcessImage(imageData, operation);
 
-                using (MemoryStream modifiedImageStream = new MemoryStream())
-                {              
-                    modifiedImage.Save(modifiedImageStream, ImageFormat.Jpeg);
-                    byte[] modifiedImageData = modifiedImageStream.ToArray();
+                // Отправляем модифицированное изображение клиенту порциями
+                byte[] modifiedImageData = ImageToByteArray(modifiedImage);
+                int offset = 0;
 
-                    SendStopwatch.Start();
-                    //передача обновленного изображения
-                    udpListener.Send(modifiedImageData, modifiedImageData.Length, remoteEndPoint);
+                Stopwatch SendStopwatch = Stopwatch.StartNew();
 
-                    SendStopwatch.Stop();
-                    Console.WriteLine("Измененное изображение отправлено клиенту.");
+                while (offset < modifiedImageData.Length)
+                {
+                    int remainingBytes = modifiedImageData.Length - offset;
+                    int bytesToSend = Math.Min(maxPacketSize, remainingBytes);
+
+                    byte[] chunk = new byte[bytesToSend];
+                    Buffer.BlockCopy(modifiedImageData, offset, chunk, 0, bytesToSend);
+
+                    // Отправляем порцию данных клиенту
+                    udpListener.Send(chunk, chunk.Length, remoteEndPoint);
+
+                    offset += bytesToSend;
                 }
-                long receiveDelayMilliseconds = SendStopwatch.ElapsedMilliseconds;
-                Console.WriteLine($"Задержка приема: {receiveDelayMilliseconds} мс");
+
+                // Отправляем пустой пакет для обозначения окончания передачи
+                byte[] endSignal = BitConverter.GetBytes(-1);
+                udpListener.Send(endSignal, endSignal.Length, remoteEndPoint);
+
+                SendStopwatch.Stop();
 
                 // Обновляем статистику
                 packetCount++;
                 totalDataSize += imageSize;
 
+                long SendDelayMilliseconds = SendStopwatch.ElapsedMilliseconds;
+                Console.WriteLine($"Задержка приема: {SendDelayMilliseconds} мс");
+
                 // Анализ использования ресурсов (процессорное время)
                 long processorTimeMilliseconds = (long)Process.GetCurrentProcess().TotalProcessorTime.TotalMilliseconds;
                 Console.WriteLine($"Процессорное время: {processorTimeMilliseconds} мс");
-            }
 
-            // Вывод статистики
-            Console.WriteLine($"Всего отправлено пакетов: {packetCount}");
-            Console.WriteLine($"Общий размер переданных данных: {totalDataSize} байт");
+                // Вывод статистики
+                Console.WriteLine($"Всего отправлено пакетов: {packetCount}");
+                Console.WriteLine($"Общий размер переданных данных: {totalDataSize} байт");
+            }
         }
     }
 
+    private static byte[] ImageToByteArray(Image image)
+    {
+        using (MemoryStream ms = new MemoryStream())
+        {
+            image.Save(ms, ImageFormat.Jpeg);
+            return ms.ToArray();
+        }
+    }
     private static Image ProcessImage(byte[] imageData, int operation)
     {
         using (MemoryStream ms = new MemoryStream(imageData))
@@ -98,8 +114,8 @@ class UDPServer
                     break;
                 case 5:
                     img.RotateFlip(RotateFlipType.Rotate180FlipNone);
-                    img = ScaleImage(img, 1.7f);
-                    ApplyBrightnessFilter(img, 2.0f);
+                    img = ScaleImage(img, 2.5f);
+                    ApplyBrightnessFilter(img, 2.3f);
                     ApplyNoiseEffect(img, 50);
                     break;
                 default:
