@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\гитхаб разработки\\Kursovoy\\HTTPServer\\HTTPClient\\HTTPClient.csproj",
+      "projectUniqueName": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\HTTPServer\\HTTPClient\\HTTPClient.csproj",
       "projectName": "HTTPClient",
-      "projectPath": "D:\\гитхаб разработки\\Kursovoy\\HTTPServer\\HTTPClient\\HTTPClient.csproj",
+      "projectPath": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\HTTPServer\\HTTPClient\\HTTPClient.csproj",
       "packagesPath": "C:\\Users\\Disoland\\.nuget\\packages\\",
-      "outputPath": "D:\\гитхаб разработки\\Kursovoy\\HTTPServer\\HTTPClient\\obj\\",
+      "outputPath": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\HTTPServer\\HTTPClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual_SDK\\NuGetPackages"

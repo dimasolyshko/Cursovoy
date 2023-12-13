@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "JcFkM+RTmPlD8uV18vSmYARLnzSfUxReHZ+jFYpgMjTknMdjIqtwcbKCd1NKjBEI4yZ0uw5zGCst/q12IK9VbQ==",
+  "success": true,
+  "projectFilePath": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\SOCKET\\UDPServer\\UDPServer\\UDPClient\\UDPClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Disoland\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\Disoland\\.nuget\\packages\\opencvsharp4\\4.8.0.20230708\\opencvsharp4.4.8.0.20230708.nupkg.sha512",
+    "C:\\Users\\Disoland\\.nuget\\packages\\opencvsharp4.extensions\\4.8.0.20230708\\opencvsharp4.extensions.4.8.0.20230708.nupkg.sha512",
+    "C:\\Users\\Disoland\\.nuget\\packages\\opencvsharp4.runtime.win\\4.8.0.20230708\\opencvsharp4.runtime.win.4.8.0.20230708.nupkg.sha512",
+    "C:\\Users\\Disoland\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\Disoland\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\Disoland\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

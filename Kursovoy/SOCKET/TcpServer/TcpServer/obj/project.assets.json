@@ -1047,11 +1047,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\гитхаб разработки\\Kursovoy\\SOCKET\\TcpServer\\TcpServer\\TcpServer.csproj",
+      "projectUniqueName": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\SOCKET\\TcpServer\\TcpServer\\TcpServer.csproj",
       "projectName": "TcpServer",
-      "projectPath": "D:\\гитхаб разработки\\Kursovoy\\SOCKET\\TcpServer\\TcpServer\\TcpServer.csproj",
+      "projectPath": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\SOCKET\\TcpServer\\TcpServer\\TcpServer.csproj",
       "packagesPath": "C:\\Users\\Disoland\\.nuget\\packages\\",
-      "outputPath": "D:\\гитхаб разработки\\Kursovoy\\SOCKET\\TcpServer\\TcpServer\\obj\\",
+      "outputPath": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\SOCKET\\TcpServer\\TcpServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual_SDK\\NuGetPackages"
@@ -1112,24 +1112,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.25, 6.0.25]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

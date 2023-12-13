@@ -53,3 +53,31 @@ D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Deb
 D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\TcpServer.pdb
 D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\TcpServer.genruntimeconfig.cache
 D:\гитхаб разработки\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\ref\TcpServer.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\TcpServer.exe
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\TcpServer.deps.json
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\TcpServer.runtimeconfig.json
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\TcpServer.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\TcpServer.pdb
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\MPI.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\OpenCvSharp.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\OpenCvSharp.Extensions.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\runtimes\win-x64\native\OpenCvSharpExtern.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\runtimes\win-x64\native\opencv_videoio_ffmpeg480_64.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\runtimes\win-x86\native\OpenCvSharpExtern.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\runtimes\win-x86\native\opencv_videoio_ffmpeg480.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\TcpServer.csproj.AssemblyReference.cache
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\TcpServer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\TcpServer.AssemblyInfoInputs.cache
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\TcpServer.AssemblyInfo.cs
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\TcpServer.csproj.CoreCompileInputs.cache
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\TcpServer.sourcelink.json
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\TcpServer.csproj.CopyComplete
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\TcpServer.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\refint\TcpServer.dll
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\TcpServer.pdb
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\TcpServer.genruntimeconfig.cache
+D:\Githab_Repositories\Cursovoy\Kursovoy\SOCKET\TcpServer\TcpServer\obj\Debug\net6.0\ref\TcpServer.dll

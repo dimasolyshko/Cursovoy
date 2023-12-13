@@ -323,11 +323,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\гитхаб разработки\\Kursovoy\\HTTPServer\\HTTPServer\\HTTPServer.csproj",
+      "projectUniqueName": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\HTTPServer\\HTTPServer\\HTTPServer.csproj",
       "projectName": "HTTPServer",
-      "projectPath": "D:\\гитхаб разработки\\Kursovoy\\HTTPServer\\HTTPServer\\HTTPServer.csproj",
+      "projectPath": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\HTTPServer\\HTTPServer\\HTTPServer.csproj",
       "packagesPath": "C:\\Users\\Disoland\\.nuget\\packages\\",
-      "outputPath": "D:\\гитхаб разработки\\Kursovoy\\HTTPServer\\HTTPServer\\obj\\",
+      "outputPath": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\HTTPServer\\HTTPServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual_SDK\\NuGetPackages"

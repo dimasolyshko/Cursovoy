@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dFQNCpMArIZ9dFyLlbzjIRdGJKHhJj+xhcSprgiFNvvTmchJtCCc35OvxP8mMC6FfUDHWHnQMPnItev4wy2ywA==",
+  "dgSpecHash": "xojiFDzy/p8YUTzM/yquKw1K7CqnO6d59cYYv3Hg0+dFFSXx/Z6iVEqnTPB3rx/Q82IQK0NGO93vm/RrDVlw9g==",
   "success": true,
-  "projectFilePath": "D:\\гитхаб разработки\\Kursovoy\\HTTPServer\\HTTPServer\\HTTPServer.csproj",
+  "projectFilePath": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\HTTPServer\\HTTPServer\\HTTPServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Disoland\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\Disoland\\.nuget\\packages\\opencvsharp4\\4.8.0.20230708\\opencvsharp4.4.8.0.20230708.nupkg.sha512",

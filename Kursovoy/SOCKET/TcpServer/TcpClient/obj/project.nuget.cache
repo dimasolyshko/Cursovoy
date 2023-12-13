@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O2FnWkk1r9/+1GG4d6w/TILw21LAWfIUsvmJDwzJKUlDN3VtkzgU9pyKX4MMUTOZKu39EpE6kIury0Zt/nP2kw==",
+  "dgSpecHash": "lF1NYN02NdRB8YMJJ60OCfTADzqd8IHnbPnOG+yc0fang08NOZ+BSlIGdq0jCOtjT2m/AMmSf9lC/WRoG0rcGg==",
   "success": true,
-  "projectFilePath": "D:\\гитхаб разработки\\Kursovoy\\SOCKET\\TcpServer\\TcpClient\\TcpClient.csproj",
+  "projectFilePath": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\SOCKET\\TcpServer\\TcpClient\\TcpClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Disoland\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Disoland\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
@@ -21,11 +21,7 @@
     "C:\\Users\\Disoland\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\Disoland\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Disoland\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
-    "C:\\Users\\Disoland\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
-    "C:\\Users\\Disoland\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\Disoland\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\Disoland\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\Disoland\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
+    "C:\\Users\\Disoland\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

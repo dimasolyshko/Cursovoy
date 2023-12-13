@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\гитхаб разработки\\Kursovoy\\SOCKET\\TcpServer\\TcpClient\\TcpClient.csproj": {}
+    "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\SOCKET\\TcpServer\\TcpClient\\TcpClient.csproj": {}
   },
   "projects": {
-    "D:\\гитхаб разработки\\Kursovoy\\SOCKET\\TcpServer\\TcpClient\\TcpClient.csproj": {
+    "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\SOCKET\\TcpServer\\TcpClient\\TcpClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\гитхаб разработки\\Kursovoy\\SOCKET\\TcpServer\\TcpClient\\TcpClient.csproj",
+        "projectUniqueName": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\SOCKET\\TcpServer\\TcpClient\\TcpClient.csproj",
         "projectName": "TcpClient",
-        "projectPath": "D:\\гитхаб разработки\\Kursovoy\\SOCKET\\TcpServer\\TcpClient\\TcpClient.csproj",
+        "projectPath": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\SOCKET\\TcpServer\\TcpClient\\TcpClient.csproj",
         "packagesPath": "C:\\Users\\Disoland\\.nuget\\packages\\",
-        "outputPath": "D:\\гитхаб разработки\\Kursovoy\\SOCKET\\TcpServer\\TcpClient\\obj\\",
+        "outputPath": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\SOCKET\\TcpServer\\TcpClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual_SDK\\NuGetPackages"
@@ -72,24 +72,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.25, 6.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
