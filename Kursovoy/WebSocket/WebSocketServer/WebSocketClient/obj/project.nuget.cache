@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "V4UUp/rf8uoC229/Wj+SU66RbtbQ0KWg1G0JCj2fBj7Dcg1zdJ36K4/3Wdtz/HXZuGi9Cidv7d4hVnIxnCFvFw==",
+  "success": true,
+  "projectFilePath": "D:\\Githab_Repositories\\Cursovoy\\Kursovoy\\WebSocket\\WebSocketServer\\WebSocketClient\\WebSocketClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Disoland\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\Disoland\\.nuget\\packages\\opencvsharp4\\4.8.0.20230708\\opencvsharp4.4.8.0.20230708.nupkg.sha512",
+    "C:\\Users\\Disoland\\.nuget\\packages\\opencvsharp4.extensions\\4.8.0.20230708\\opencvsharp4.extensions.4.8.0.20230708.nupkg.sha512",
+    "C:\\Users\\Disoland\\.nuget\\packages\\opencvsharp4.runtime.win\\4.8.0.20230708\\opencvsharp4.runtime.win.4.8.0.20230708.nupkg.sha512",
+    "C:\\Users\\Disoland\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\Disoland\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\Disoland\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
