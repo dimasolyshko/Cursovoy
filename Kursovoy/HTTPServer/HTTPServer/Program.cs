@@ -37,8 +37,11 @@ class Server
                 byte[] imageData = new byte[imageSize];
                 int bytesRead = await receiveStream.ReadAsync(imageData, 0, imageData.Length);
 
-                // Измеряем задержку приема
-                Stopwatch receiveStopwatch = Stopwatch.StartNew();
+                // Измеряем задержку отправки
+                Stopwatch sendStopwatch = Stopwatch.StartNew();
+
+                //Измеряем задержку обработки
+                Stopwatch imageProccesingStopwatch = Stopwatch.StartNew();
 
                 using (MemoryStream ms = new MemoryStream(imageData))
                 {
@@ -69,6 +72,10 @@ class Server
                             break;
                     }
 
+                    imageProccesingStopwatch.Stop();
+
+                    sendStopwatch.Restart();
+
                     // Отправка измененного изображения клиенту
                     using (MemoryStream modifiedImageStream = new MemoryStream())
                     {
@@ -86,10 +93,14 @@ class Server
                     }
                 }
 
-                // Измеряем задержку приема
-                receiveStopwatch.Stop();
-                long receiveDelayMilliseconds = receiveStopwatch.ElapsedMilliseconds;
-                Console.WriteLine($"Задержка приема: {receiveDelayMilliseconds} мс");
+                // Измеряем задержку отправки
+                sendStopwatch.Stop();
+
+                long sendDelayMilliseconds = sendStopwatch.ElapsedMilliseconds;
+                Console.WriteLine($"Задержка отправки: {sendDelayMilliseconds} мс");
+
+                long imageProccesingDelayMilliseconds = imageProccesingStopwatch.ElapsedMilliseconds;
+                Console.WriteLine($"Задержка обработки изображения: {imageProccesingDelayMilliseconds} мс");
 
                 totalDataSize += imageSize;
 

@@ -43,6 +43,8 @@ class Server
                     // Измеряем задержку приема
                     Stopwatch receiveStopwatch = Stopwatch.StartNew();
 
+                    Stopwatch ImageProccesingStopwatch = Stopwatch.StartNew();
+
                     // Обрабатываем изображение в зависимости от номера операции
                     using (MemoryStream ms = new MemoryStream(imageData))
                     {
@@ -72,7 +74,9 @@ class Server
                                 Console.WriteLine("Неверный номер операции");
                                 break;
                         }
+                        ImageProccesingStopwatch.Stop();
 
+                        receiveStopwatch.Restart();
                         // Отправляем размер измененного изображения клиенту
                         using (MemoryStream modifiedImageStream = new MemoryStream())
                         {
@@ -93,6 +97,9 @@ class Server
                     long receiveDelayMilliseconds = receiveStopwatch.ElapsedMilliseconds;
                     Console.WriteLine($"Задержка приема: {receiveDelayMilliseconds} мс");
 
+                    long ImageProccesingDelayMilliseconds = ImageProccesingStopwatch.ElapsedMilliseconds;
+                    Console.WriteLine($"Время обработки изображения: {ImageProccesingDelayMilliseconds} мс");
+
                     // Обновляем статистику
                     packetCount++;
                     totalDataSize += imageSize;
@@ -100,6 +107,7 @@ class Server
                     // Анализ использования ресурсов (процессорное время)
                     long processorTimeMilliseconds = (long)Process.GetCurrentProcess().TotalProcessorTime.TotalMilliseconds;
                     Console.WriteLine($"Процессорное время: {processorTimeMilliseconds} мс");
+                    Console.WriteLine();
                 }
             }
 

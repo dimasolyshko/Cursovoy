@@ -2,6 +2,7 @@
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Diagnostics;
 
 class Client
 {
@@ -24,6 +25,8 @@ class Client
                     int operation = 0; // Изменение яркости (может быть любая операция: 1, 2, 3 или 4)
                     Console.WriteLine("Введите номер операции, где \n1. Повернуть изображение на 180 градусов\n2.Увеличить изображение\n3.Добавить яркость\n4.Добавить шума\n5.Выполнить всё");
                     operation = Convert.ToInt32(Console.ReadLine());
+                    //Измеряем общее время отправки и получения
+                    Stopwatch mainStopwatch = Stopwatch.StartNew();
                     writer.Write(operation);
 
                     // Отправляем размер изображения на сервер
@@ -39,10 +42,16 @@ class Client
                     int modifiedImageSize = reader.ReadInt32();
                     byte[] modifiedImageData = reader.ReadBytes(modifiedImageSize);
 
+                    mainStopwatch.Stop();
+
                     // Сохраняем обработанное изображение
                     File.WriteAllBytes("D:\\ImagesForProgramming\\NewImageTCP.jpg", modifiedImageData);
                     Console.WriteLine("Получено и сохранено обработанное изображение.");
 
+
+                    long mainDelayMilliseconds = mainStopwatch.ElapsedMilliseconds;
+                    Console.WriteLine($"Общее время отправки и получения : {mainDelayMilliseconds} мс");
+                    Console.WriteLine();
                 }
             }    
         }

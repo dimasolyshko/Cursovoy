@@ -37,8 +37,12 @@ class UDPServer
                 // Получаем изображение
                 byte[] imageData = reader.ReadBytes(imageSize);
 
+                Stopwatch ProcessImageStopwatch = Stopwatch.StartNew();
+
                 // Обрабатываем изображение в зависимости от номера операции
                 Image modifiedImage = ProcessImage(imageData, operation);
+
+                ProcessImageStopwatch.Stop();
 
                 // Отправляем модифицированное изображение клиенту порциями
                 byte[] modifiedImageData = ImageToByteArray(modifiedImage);
@@ -70,8 +74,12 @@ class UDPServer
                 packetCount++;
                 totalDataSize += imageSize;
 
+                long ProcessImageDelayMilliseconds = ProcessImageStopwatch.ElapsedMilliseconds;
+                Console.WriteLine($"Время Обработки изображения: {ProcessImageDelayMilliseconds} мс");
+
                 long SendDelayMilliseconds = SendStopwatch.ElapsedMilliseconds;
-                Console.WriteLine($"Задержка приема: {SendDelayMilliseconds} мс");
+                Console.WriteLine($"Время отправки: {SendDelayMilliseconds} мс");
+
 
                 // Анализ использования ресурсов (процессорное время)
                 long processorTimeMilliseconds = (long)Process.GetCurrentProcess().TotalProcessorTime.TotalMilliseconds;
@@ -80,6 +88,7 @@ class UDPServer
                 // Вывод статистики
                 Console.WriteLine($"Всего отправлено пакетов: {packetCount}");
                 Console.WriteLine($"Общий размер переданных данных: {totalDataSize} байт");
+                Console.WriteLine();
             }
         }
     }

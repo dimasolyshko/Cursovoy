@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
@@ -26,6 +27,10 @@ class Client
                     int operation = 0; // Изменение яркости (может быть любая операция: 1, 2, 3 или 4)
                     Console.WriteLine("Введите номер операции, где \n0. Выход\n1. Повернуть изображение на 180 градусов\n2.Увеличить изображение\n3.Добавить яркость\n4.Добавить шума\n5.Выполнить всё");
                     operation = Convert.ToInt32(Console.ReadLine());
+
+                    //Измерение общего времени отправки и получения изображения
+                    Stopwatch ProcessImageStopwatch = Stopwatch.StartNew();
+
                     writer.Write(operation);
 
                     if(operation == 0)
@@ -64,6 +69,12 @@ class Client
                         receivedImage.Save("D:\\ImagesForProgramming\\NewImageUDP.jpg", ImageFormat.Jpeg);
                         Console.WriteLine("Получено и сохранено обработанное изображение.");
                     }
+
+                    ProcessImageStopwatch.Stop();
+
+                    long ProcessImageDelayMilliseconds = ProcessImageStopwatch.ElapsedMilliseconds;
+                    Console.WriteLine($"Общее время отправки и получения изображения: {ProcessImageDelayMilliseconds} мс");
+                    Console.WriteLine();
                 }
             }
             catch (Exception ex)

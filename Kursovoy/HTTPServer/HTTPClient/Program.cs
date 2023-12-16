@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
@@ -25,6 +26,9 @@ class Client
                     Console.WriteLine("Введите номер операции:\n1. Повернуть изображение на 180 градусов\n2. Увеличить изображение\n3. Добавить яркость\n4. Добавить шум\n5. Выполнить всё");
                     int operation = int.Parse(Console.ReadLine());
 
+                    //Измерение общего времени отправки и получения изображения
+                    Stopwatch mainStopwatch = Stopwatch.StartNew();
+
                     // Создание потока с данными изображения и операцией
                     MemoryStream imageStream = new MemoryStream();
                     imageStream.Write(BitConverter.GetBytes(operation), 0, sizeof(int));
@@ -36,6 +40,11 @@ class Client
                     HttpResponseMessage response = await client.PostAsync(serverUrl, content);
 
                     byte[] modifiedImageData = await response.Content.ReadAsByteArrayAsync();
+
+                    mainStopwatch.Stop();
+
+                    long mainDelayMilliseconds = mainStopwatch.ElapsedMilliseconds;
+                    Console.WriteLine($"Общее время отправки и получения изображения: {mainDelayMilliseconds} мс");
 
                     File.WriteAllBytes("D:\\ImagesForProgramming\\NewImageHTTP.jpg", modifiedImageData);
                     Console.WriteLine("Получено и сохранено измененное изображение.");
